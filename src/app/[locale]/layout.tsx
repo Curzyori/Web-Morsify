@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ZeroCache",
-  description: "One-tap Android cache cleaner with Root & No-Root modes",
+  title: "Morsify",
+  description: "Morse code transmitter for Android with Flashlight & Sound modes",
 };
 
 export default function LocaleLayout({
