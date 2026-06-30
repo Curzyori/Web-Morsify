@@ -31,6 +31,7 @@ export default async function HomePage({
   const navProps = {
     locale,
     logo: "/logo.png",
+    name: "Morsify",
     githubRepo: "Curzyori/morsify",
     stars,
     brandColor: "purple" as const,

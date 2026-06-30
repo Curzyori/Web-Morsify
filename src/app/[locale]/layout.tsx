@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://morsify.curzy.dev"),
   title: "Morsify",
   description: "Morse code transmitter for Android with Flashlight & Sound modes",
 };

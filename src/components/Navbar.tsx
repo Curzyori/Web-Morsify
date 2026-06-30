@@ -44,7 +44,7 @@ export function Navbar({ locale, logo, githubRepo, stars, brandColor }: NavbarPr
   const isActive = (href: string) => pathname === href;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
+    <nav aria-label="Main navigation" className="fixed top-0 left-0 right-0 z-50 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -78,6 +78,7 @@ export function Navbar({ locale, logo, githubRepo, stars, brandColor }: NavbarPr
             {/* Lang Toggle */}
             <Link
               href={pathname.replace(`/${locale}`, `/${locale === "en" ? "id" : "en"}`)}
+              aria-label={locale === "en" ? "Switch to Indonesian" : "Switch to English"}
               className="text-sm font-medium text-foreground/60 hover:text-foreground"
             >
               {locale === "en" ? "ID" : "EN"}
@@ -88,6 +89,7 @@ export function Navbar({ locale, logo, githubRepo, stars, brandColor }: NavbarPr
               href={`https://github.com/${githubRepo}`}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View on GitHub (opens in new tab)"
               className="text-foreground/60 hover:text-foreground"
             >
               <GitHubIcon className="h-5 w-5" />
